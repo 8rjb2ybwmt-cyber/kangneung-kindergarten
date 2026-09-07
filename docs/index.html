@@ -46,6 +46,9 @@
         .logo img {
             width: 100%;
             height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
             border-radius: 50%;
             object-fit: contain;
         }
@@ -245,6 +248,7 @@
             background: white;
             border-radius: 8px;
             overflow: hidden;
+            margin: 0;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
@@ -253,17 +257,19 @@
             transform: scale(1.05);
         }
 
-        .chapter-image-placeholder {
+        .chapter-image img {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .chapter-image-caption {
+            padding: 12px 14px;
             font-size: 14px;
+            color: #4b5563;
             text-align: center;
-            padding: 20px;
+            background: #ffffff;
         }
 
         /* 엔딩 */
@@ -350,7 +356,7 @@
     <header>
         <div class="logo-container">
             <div class="logo">
-                🌳📖
+                <img src="images/image01.svg" alt="강릉유치원 로고" width="1200" height="1200" loading="eager" decoding="async">
             </div>
         </div>
         <h1>강릉유치원</h1>
@@ -444,89 +450,76 @@
     <!-- 놀고, 만나고, 경험하며 자랍니다 -->
     <section class="chapters-section">
         <h2>놀고, 만나고, 경험하며 자랍니다</h2>
-        <p class="section-subtitle">몸과 마음, 자연과 예술이 연결되는 풍성한 유치원 생활</p>
+        <p class="section-subtitle">아이들의 배움과 성장을 담은 활동 장면입니다.</p>
 
         <div class="chapter">
-            <h3>1. 보고 느끼며 배우는 견학, 체험활동</h3>
-            <p>아이들이 직접 경험하고 오감으로 배우는 시간들입니다.</p>
+            <h3>1. 스스로 배우는 힘, 몬테소리 (3장)</h3>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <figure class="chapter-image"><img src="images/image02.svg" alt="" aria-labelledby="activity-caption-02" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-02" class="chapter-image-caption">몬테소리 활동 1</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image03.svg" alt="" aria-labelledby="activity-caption-03" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-03" class="chapter-image-caption">몬테소리 활동 2</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image04.svg" alt="" aria-labelledby="activity-caption-04" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-04" class="chapter-image-caption">몬테소리 활동 3</figcaption></figure>
             </div>
         </div>
 
         <div class="chapter">
-            <h3>2. 함께 뛰고 웃는 숲 가족활동</h3>
-            <p>자연 속에서 함께하는 따뜻한 추억들입니다.</p>
+            <h3>2. 이야기로 세상을 만나는 그림책 (4장)</h3>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <figure class="chapter-image"><img src="images/image05.svg" alt="" aria-labelledby="activity-caption-05" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-05" class="chapter-image-caption">그림책 활동 1</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image06.svg" alt="" aria-labelledby="activity-caption-06" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-06" class="chapter-image-caption">그림책 활동 2</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image07.svg" alt="" aria-labelledby="activity-caption-07" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-07" class="chapter-image-caption">그림책 활동 3</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image08.svg" alt="" aria-labelledby="activity-caption-08" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-08" class="chapter-image-caption">그림책 활동 4</figcaption></figure>
             </div>
         </div>
 
         <div class="chapter">
-            <h3>3. 도전하며 성장하는 튼튼자람</h3>
-            <p>신체활동을 통해 건강하고 강인한 마음을 키웁니다.</p>
+            <h3>3. 마음의 뿌리를 세우는 인성교육 (4장)</h3>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <figure class="chapter-image"><img src="images/image09.svg" alt="" aria-labelledby="activity-caption-09" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-09" class="chapter-image-caption">인성교육 활동 1</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image10.svg" alt="" aria-labelledby="activity-caption-10" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-10" class="chapter-image-caption">인성교육 활동 2</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image11.svg" alt="" aria-labelledby="activity-caption-11" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-11" class="chapter-image-caption">인성교육 활동 3</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image12.svg" alt="" aria-labelledby="activity-caption-12" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-12" class="chapter-image-caption">인성교육 활동 4</figcaption></figure>
             </div>
         </div>
 
         <div class="chapter">
-            <h3>4. 자연과 함께하는 공동체놀이</h3>
-            <p>함께 놀고 함께 성장하는 공동체의 가치를 배웁니다.</p>
+            <h3>4. 방과후 특성화 활동 (4장)</h3>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <figure class="chapter-image"><img src="images/image13.svg" alt="" aria-labelledby="activity-caption-13" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-13" class="chapter-image-caption">방과후 특성화 활동 1</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image14.svg" alt="" aria-labelledby="activity-caption-14" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-14" class="chapter-image-caption">방과후 특성화 활동 2</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image15.svg" alt="" aria-labelledby="activity-caption-15" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-15" class="chapter-image-caption">방과후 특성화 활동 3</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image16.svg" alt="" aria-labelledby="activity-caption-16" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-16" class="chapter-image-caption">방과후 특성화 활동 4</figcaption></figure>
             </div>
         </div>
 
         <div class="chapter">
-            <h3>5. 심고 가꾸며 배우는 생명의 소중함</h3>
-            <p>자연의 순환 속에서 생명의 소중함을 깨닫습니다.</p>
+            <h3>5. 창의/발표/손끝 활동 (4장)</h3>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <figure class="chapter-image"><img src="images/image17.svg" alt="" aria-labelledby="activity-caption-17" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-17" class="chapter-image-caption">창의/발표/손끝 활동 1</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image18.svg" alt="" aria-labelledby="activity-caption-18" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-18" class="chapter-image-caption">창의/발표/손끝 활동 2</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image19.svg" alt="" aria-labelledby="activity-caption-19" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-19" class="chapter-image-caption">창의/발표/손끝 활동 3</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image20.svg" alt="" aria-labelledby="activity-caption-20" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-20" class="chapter-image-caption">창의/발표/손끝 활동 4</figcaption></figure>
             </div>
         </div>
 
         <div class="chapter">
-            <h3>6. 상상이 펼쳐지는 모래놀이</h3>
-            <p>모래 속에서 무한한 상상력이 펼쳐집니다.</p>
+            <h3>6. 세부 특성화 활동 (4장)</h3>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <figure class="chapter-image"><img src="images/image21.svg" alt="" aria-labelledby="activity-caption-21" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-21" class="chapter-image-caption">창의미술</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image22.svg" alt="" aria-labelledby="activity-caption-22" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-22" class="chapter-image-caption">발표력 쑥쑥</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image23.svg" alt="" aria-labelledby="activity-caption-23" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-23" class="chapter-image-caption">케이넥스</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image24.svg" alt="" aria-labelledby="activity-caption-24" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-24" class="chapter-image-caption">손끝놀이</figcaption></figure>
             </div>
         </div>
 
         <div class="chapter">
-            <h3>7. 직접 만들고 맛보는 다온누리</h3>
-            <p>요리를 통해 음식의 소중함과 협력을 배웁니다.</p>
+            <h3>7. 공동체 놀이와 장구 활동 (2장)</h3>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <figure class="chapter-image"><img src="images/image25.svg" alt="" aria-labelledby="activity-caption-25" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-25" class="chapter-image-caption">공동체게임</figcaption></figure>
+                <figure class="chapter-image"><img src="images/image26.svg" alt="" aria-labelledby="activity-caption-26" width="1200" height="900" loading="lazy" decoding="async"><figcaption id="activity-caption-26" class="chapter-image-caption">장구</figcaption></figure>
             </div>
         </div>
 
-        <div class="chapter">
-            <h3>8. 지구를 생각하는 환경교육</h3>
-            <p>작은 실천이 모여 지구를 변화시킨다는 것을 배웁니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
-            </div>
-        </div>
     </section>
-
     <!-- 엔딩 -->
     <section class="ending-section">
         <h2>2027, 강릉유치원에서 만나요</h2>
