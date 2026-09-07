@@ -211,59 +211,73 @@
             font-size: 14px;
         }
 
-        /* 챕터 섹션 */
-        .chapters-section {
+        /* 사진 갤러리 */
+        .photo-section {
             background: white;
             padding: 60px 40px;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .chapter {
-            margin-bottom: 60px;
-            padding: 30px;
-            background: #f5f5f5;
-            border-radius: 10px;
+        .gallery-group + .gallery-group {
+            margin-top: 60px;
         }
 
-        .chapter h3 {
+        .gallery-group h3 {
             color: #6b8e6b;
-            font-size: 24px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            font-size: 28px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
             border-bottom: 3px solid #d4af37;
         }
 
-        .chapter-images {
+        .gallery-description {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        .photo-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
         }
 
-        .chapter-image {
-            background: white;
-            border-radius: 8px;
+        .photo-card {
+            background: #f8faf8;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .chapter-image:hover {
-            transform: scale(1.05);
+        .photo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 24px rgba(107, 142, 107, 0.18);
         }
 
-        .chapter-image-placeholder {
+        .photo-card img {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 14px;
-            text-align: center;
-            padding: 20px;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            display: block;
+            background: #eef5ee;
+        }
+
+        .photo-card figcaption {
+            padding: 18px;
+        }
+
+        .photo-card strong {
+            display: block;
+            color: #6b8e6b;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .photo-card span {
+            color: #555;
+            font-size: 15px;
         }
 
         /* 엔딩 */
@@ -332,15 +346,19 @@
             .education-direction,
             .special-learning,
             .experience-section,
-            .chapters-section {
+            .photo-section {
                 padding: 40px 20px;
             }
 
             .direction-grid,
             .learning-items,
             .program-grid,
-            .chapter-images {
+            .photo-gallery {
                 grid-template-columns: 1fr;
+            }
+
+            .gallery-group h3 {
+                font-size: 24px;
             }
         }
     </style>
@@ -350,7 +368,7 @@
     <header>
         <div class="logo-container">
             <div class="logo">
-                🌳📖
+                <img src="images/logo/kangneung-kindergarten-logo.svg" alt="강릉유치원 로고">
             </div>
         </div>
         <h1>강릉유치원</h1>
@@ -441,88 +459,155 @@
         </div>
     </section>
 
-    <!-- 놀고, 만나고, 경험하며 자랍니다 -->
-    <section class="chapters-section">
-        <h2>놀고, 만나고, 경험하며 자랍니다</h2>
-        <p class="section-subtitle">몸과 마음, 자연과 예술이 연결되는 풍성한 유치원 생활</p>
+    <!-- 사진 갤러리 -->
+    <section class="photo-section">
+        <h2>사진으로 만나는 강릉유치원</h2>
+        <p class="section-subtitle">받은 사진들을 교육 주제별로 정리해 한눈에 볼 수 있도록 구성했습니다.</p>
 
-        <div class="chapter">
-            <h3>1. 보고 느끼며 배우는 견학, 체험활동</h3>
-            <p>아이들이 직접 경험하고 오감으로 배우는 시간들입니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+        <div class="gallery-group">
+            <h3>몬테소리 활동</h3>
+            <p class="gallery-description">스스로 선택하고 집중하며 배우는 몬테소리 활동 사진입니다.</p>
+            <div class="photo-gallery">
+                <figure class="photo-card">
+                    <img src="images/special-learning/montessori-1.svg" alt="몬테소리 활동 사진 1" loading="lazy">
+                    <figcaption><strong>몬테소리 활동 1</strong><span>스스로 선택하고 탐색하는 시간</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/special-learning/montessori-2.svg" alt="몬테소리 활동 사진 2" loading="lazy">
+                    <figcaption><strong>몬테소리 활동 2</strong><span>손으로 배우며 몰입하는 경험</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/special-learning/montessori-3.svg" alt="몬테소리 활동 사진 3" loading="lazy">
+                    <figcaption><strong>몬테소리 활동 3</strong><span>질서와 반복 속에서 자라는 자신감</span></figcaption>
+                </figure>
             </div>
         </div>
 
-        <div class="chapter">
-            <h3>2. 함께 뛰고 웃는 숲 가족활동</h3>
-            <p>자연 속에서 함께하는 따뜻한 추억들입니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+        <div class="gallery-group">
+            <h3>그림책 활동</h3>
+            <p class="gallery-description">이야기를 듣고 상상하고 표현하는 그림책 활동 사진입니다.</p>
+            <div class="photo-gallery">
+                <figure class="photo-card">
+                    <img src="images/special-learning/picture-book-1.svg" alt="그림책 활동 사진 1" loading="lazy">
+                    <figcaption><strong>그림책 활동 1</strong><span>이야기와 함께 상상력을 키워요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/special-learning/picture-book-2.svg" alt="그림책 활동 사진 2" loading="lazy">
+                    <figcaption><strong>그림책 활동 2</strong><span>듣고 묻고 표현하는 독서 시간</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/special-learning/picture-book-3.svg" alt="그림책 활동 사진 3" loading="lazy">
+                    <figcaption><strong>그림책 활동 3</strong><span>그림책 속 세상과 만나는 즐거움</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/special-learning/picture-book-4.svg" alt="그림책 활동 사진 4" loading="lazy">
+                    <figcaption><strong>그림책 활동 4</strong><span>마음을 나누는 이야기 활동</span></figcaption>
+                </figure>
             </div>
         </div>
 
-        <div class="chapter">
-            <h3>3. 도전하며 성장하는 튼튼자람</h3>
-            <p>신체활동을 통해 건강하고 강인한 마음을 키웁니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+        <div class="gallery-group">
+            <h3>인성교육</h3>
+            <p class="gallery-description">믿음과 사랑, 배려를 생활 속에서 익히는 인성교육 사진입니다.</p>
+            <div class="photo-gallery">
+                <figure class="photo-card">
+                    <img src="images/special-learning/character-education-1.svg" alt="인성교육 활동 사진 1" loading="lazy">
+                    <figcaption><strong>인성교육 활동 1</strong><span>감사와 배려를 생활로 익혀요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/special-learning/character-education-2.svg" alt="인성교육 활동 사진 2" loading="lazy">
+                    <figcaption><strong>인성교육 활동 2</strong><span>믿음과 사랑을 함께 배우는 시간</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/special-learning/character-education-3.svg" alt="인성교육 활동 사진 3" loading="lazy">
+                    <figcaption><strong>인성교육 활동 3</strong><span>친구와 함께 실천하는 따뜻한 약속</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/special-learning/character-table.svg" alt="인성 표" loading="lazy">
+                    <figcaption><strong>인성 표</strong><span>생활 속 실천을 한눈에 보는 인성 표</span></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-section">
+        <h2>방과후 · 특성화 활동 갤러리</h2>
+        <p class="section-subtitle">아이들의 흥미와 발달에 맞춘 다양한 활동 사진을 섹션별 갤러리로 담았습니다.</p>
+
+        <div class="gallery-group">
+            <h3>방과후 특성화 활동</h3>
+            <p class="gallery-description">음악, 언어, 신체활동을 통해 즐겁게 배우는 방과후 특성화 활동입니다.</p>
+            <div class="photo-gallery">
+                <figure class="photo-card">
+                    <img src="images/after-school/vocal-m5.svg" alt="성악 활동 사진" loading="lazy">
+                    <figcaption><strong>성악 (만 5세)</strong><span>노래하며 자신감과 표현력을 키워요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/after-school/english-m3.svg" alt="영어 활동 사진" loading="lazy">
+                    <figcaption><strong>영어 (만 3세 · 월 2회)</strong><span>즐겁게 듣고 말하는 영어 시간</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/after-school/community-character-play.svg" alt="공동체 인성놀이 사진" loading="lazy">
+                    <figcaption><strong>공동체 인성놀이</strong><span>함께 어울리며 배려를 익혀요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/after-school/physical-education.svg" alt="유아체육 활동 사진" loading="lazy">
+                    <figcaption><strong>유아체육</strong><span>몸을 움직이며 건강한 습관을 길러요</span></figcaption>
+                </figure>
             </div>
         </div>
 
-        <div class="chapter">
-            <h3>4. 자연과 함께하는 공동체놀이</h3>
-            <p>함께 놀고 함께 성장하는 공동체의 가치를 배웁니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+        <div class="gallery-group">
+            <h3>창의 · 발표 · 손끝 활동</h3>
+            <p class="gallery-description">연령별 특성에 맞춘 신체·과학·구성 활동 사진입니다.</p>
+            <div class="photo-gallery">
+                <figure class="photo-card">
+                    <img src="images/creative/physical-education-m3-m4.svg" alt="만 3세와 만 4세 유아체육 활동 사진" loading="lazy">
+                    <figcaption><strong>유아체육 (만 3·4세)</strong><span>놀이 중심 신체활동으로 기초 체력을 키워요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/creative/physical-education-taekwondo-m5.svg" alt="만 5세 유아체육과 태권도 활동 사진" loading="lazy">
+                    <figcaption><strong>유아체육 · 태권도 (만 5세)</strong><span>도전과 질서를 배우는 활기찬 시간</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/creative/creative-science-m5.svg" alt="창의과학 활동 사진" loading="lazy">
+                    <figcaption><strong>창의과학 (만 5세)</strong><span>실험과 관찰로 호기심을 키워요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/creative/creative-lego-m3-m4.svg" alt="창의레고 활동 사진" loading="lazy">
+                    <figcaption><strong>창의레고 (만 3·4세)</strong><span>조립하며 사고력과 집중력을 길러요</span></figcaption>
+                </figure>
             </div>
         </div>
 
-        <div class="chapter">
-            <h3>5. 심고 가꾸며 배우는 생명의 소중함</h3>
-            <p>자연의 순환 속에서 생명의 소중함을 깨닫습니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
-            </div>
-        </div>
-
-        <div class="chapter">
-            <h3>6. 상상이 펼쳐지는 모래놀이</h3>
-            <p>모래 속에서 무한한 상상력이 펼쳐집니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
-            </div>
-        </div>
-
-        <div class="chapter">
-            <h3>7. 직접 만들고 맛보는 다온누리</h3>
-            <p>요리를 통해 음식의 소중함과 협력을 배웁니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
-            </div>
-        </div>
-
-        <div class="chapter">
-            <h3>8. 지구를 생각하는 환경교육</h3>
-            <p>작은 실천이 모여 지구를 변화시킨다는 것을 배웁니다.</p>
-            <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+        <div class="gallery-group">
+            <h3>추가 활동</h3>
+            <p class="gallery-description">예술, 발표, 구성, 사회성, 전통문화를 함께 경험하는 활동 사진입니다.</p>
+            <div class="photo-gallery">
+                <figure class="photo-card">
+                    <img src="images/creative/creative-art-m3-m4.svg" alt="창의미술 활동 사진" loading="lazy">
+                    <figcaption><strong>창의미술 (만 3·4세)</strong><span>그리기와 만들기로 감성을 표현해요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/creative/presentation-power-m4-m5.svg" alt="발표력 쑥쑥 활동 사진" loading="lazy">
+                    <figcaption><strong>발표력 쑥쑥 (만 4·5세)</strong><span>말하고 표현하며 자신감을 키워요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/creative/knex-m3-m4.svg" alt="케이넥스 활동 사진" loading="lazy">
+                    <figcaption><strong>케이넥스 (만 3·4세)</strong><span>입체 구조물을 만들며 창의력을 키워요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/creative/fine-motor-play.svg" alt="손끝놀이 활동 사진" loading="lazy">
+                    <figcaption><strong>손끝놀이</strong><span>세밀한 손 움직임으로 집중력을 길러요</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/creative/community-game.svg" alt="공동체게임 활동 사진" loading="lazy">
+                    <figcaption><strong>공동체게임</strong><span>함께 웃고 배우는 사회성 협력 활동</span></figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="images/creative/janggu-m5.svg" alt="장구 활동 사진" loading="lazy">
+                    <figcaption><strong>방과후 특색활동 장구 (만 5세)</strong><span>전통 장단을 익히며 문화 감수성을 키워요</span></figcaption>
+                </figure>
             </div>
         </div>
     </section>
