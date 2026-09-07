@@ -420,7 +420,7 @@
         <img src="./images/강릉유치원 로고.png" alt="강릉유치원 책 모양 로고">
         <span>강릉유치원</span>
       </a>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuList">메뉴</button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menuList" aria-label="메뉴 열기">메뉴</button>
       <ul class="menu" id="menuList">
         <li><a href="#top">홈</a></li>
         <li><a href="#special-learning">특별한 배움</a></li>
@@ -486,8 +486,9 @@
               <figure><img src="./images/인성교육-연간활동표-1.png" alt="인성교육 연간 활동표 1"><figcaption>연간 활동표 1</figcaption></figure>
               <figure><img src="./images/인성교육-연간활동표-2.png" alt="인성교육 연간 활동표 2"><figcaption>연간 활동표 2</figcaption></figure>
             </div>
-            <div class="table-wrap" aria-label="품성별 통합 활동표">
+            <div class="table-wrap">
               <table>
+                <caption style="text-align:left; padding:0.55rem; font-weight:700; color:#704a2c;">품성별 통합 활동표</caption>
                 <thead>
                   <tr><th>품성</th><th>통합 활동 예시</th></tr>
                 </thead>
@@ -632,12 +633,14 @@
     menuToggle?.addEventListener('click', () => {
       const isOpen = menuList.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
     });
 
     menuList?.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         menuList.classList.remove('open');
         menuToggle?.setAttribute('aria-expanded', 'false');
+        menuToggle?.setAttribute('aria-label', '메뉴 열기');
       });
     });
   </script>
