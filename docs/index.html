@@ -253,17 +253,19 @@
             transform: scale(1.05);
         }
 
-        .chapter-image-placeholder {
+        .chapter-image img {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 14px;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .chapter-image-caption {
+            padding: 15px;
             text-align: center;
-            padding: 20px;
+            font-size: 14px;
+            color: #555;
+            background: #f9f9f9;
         }
 
         /* 엔딩 */
@@ -396,15 +398,51 @@
         <div class="learning-items">
             <div class="learning-item">
                 <h3>01. 스스로 배우는 힘, 몬테소리</h3>
-                <p>스스로 선택하고 반복하며 몸과 마음의 경험을 통해 자립심과 배움의 힘을 키웁니다.</p>
+                <div class="chapter-images">
+                    <div class="chapter-image">
+                        <img src="images/몬테소리1.jpg" alt="몬테소리 활동 1">
+                    </div>
+                    <div class="chapter-image">
+                        <img src="images/몬테소리2.png" alt="몬테소리 활동 2">
+                    </div>
+                    <div class="chapter-image">
+                        <img src="images/몬테소리3.png" alt="몬테소리 활동 3">
+                    </div>
+                </div>
+                <p style="margin-top: 20px;">스스로 선택하고 반복하며 몸과 마음의 경험을 통해 자립심과 배움의 힘을 키웁니다.</p>
             </div>
             <div class="learning-item">
                 <h3>02. 이야기로 세상을 만나는 그림책</h3>
-                <p>매일 좋은 그림책을 만나 듣고, 상상하고, 질문하고 표현하여 생각의 세계를 넓혀갑니다.</p>
+                <div class="chapter-images">
+                    <div class="chapter-image">
+                        <img src="images/그림책활동1.jpg" alt="그림책 활동 1">
+                    </div>
+                    <div class="chapter-image">
+                        <img src="images/그림책활동2.jpg" alt="그림책 활동 2">
+                    </div>
+                    <div class="chapter-image">
+                        <img src="images/그림책활동3.jpg" alt="그림책 활동 3">
+                    </div>
+                </div>
+                <p style="margin-top: 20px;">매일 좋은 그림책을 만나 듣고, 상상하고, 질문하고 표현하여 생각의 세계를 넓혀갑니다.</p>
             </div>
             <div class="learning-item">
                 <h3>03. 마음의 뿌리를 세우는 기독교 인성교육</h3>
-                <p>믿음, 소망, 사랑 안에서 감사하는 배려를 배우고 생활 속에서 실천합니다.</p>
+                <div class="chapter-images">
+                    <div class="chapter-image">
+                        <img src="images/인성놀이1.jpg" alt="인성교육 활동">
+                    </div>
+                    <div class="chapter-image">
+                        <img src="images/인성놀이표1.jpg" alt="인성표 1">
+                    </div>
+                    <div class="chapter-image">
+                        <img src="images/인성놀이표2.jpg" alt="인성표 2">
+                    </div>
+                    <div class="chapter-image">
+                        <img src="images/인성놀이표3.jpg" alt="인성표 3">
+                    </div>
+                </div>
+                <p style="margin-top: 20px;">믿음, 소망, 사랑 안에서 감사하는 배려를 배우고 생활 속에서 실천합니다.</p>
             </div>
         </div>
     </section>
@@ -415,28 +453,40 @@
         <p class="section-subtitle">방과후 · 특성화 활동</p>
         <div class="program-grid">
             <div class="program-item">
+                <h4>🎤 성악</h4>
+                <p>만 3세</p>
+            </div>
+            <div class="program-item">
                 <h4>📚 영어</h4>
-                <p>월 2회</p>
+                <p>만 3,4,5세</p>
             </div>
             <div class="program-item">
-                <h4>🧪 창의과학 레고</h4>
-                <p>월 2회</p>
+                <h4>🧪 창의과학</h4>
+                <p>만 5세</p>
             </div>
             <div class="program-item">
-                <h4>🏃 유아체육</h4>
-                <p>월 2회</p>
-            </div>
-            <div class="program-item">
-                <h4>🥋 태권도</h4>
-                <p>특성화</p>
+                <h4>🧱 창의레고</h4>
+                <p>만 3,4세</p>
             </div>
             <div class="program-item">
                 <h4>🎨 창의미술</h4>
+                <p>만 3,4세</p>
+            </div>
+            <div class="program-item">
+                <h4>🏃 유아체육</h4>
+                <p>만 3,4,5세</p>
+            </div>
+            <div class="program-item">
+                <h4>🥋 태권도</h4>
+                <p>만 5세</p>
+            </div>
+            <div class="program-item">
+                <h4>🎭 공동체인성놀이</h4>
                 <p>특성화</p>
             </div>
             <div class="program-item">
                 <h4>🥁 장구</h4>
-                <p>특성화</p>
+                <p>만 5세</p>
             </div>
         </div>
     </section>
@@ -450,9 +500,30 @@
             <h3>1. 보고 느끼며 배우는 견학, 체험활동</h3>
             <p>아이들이 직접 경험하고 오감으로 배우는 시간들입니다.</p>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <div class="chapter-image">
+                    <img src="images/견학체험-가을소풍 1.jpg" alt="가을소풍 1">
+                    <div class="chapter-image-caption">가을소풍</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/견학체험-가을소풍 2.jpg" alt="가을소풍 2">
+                    <div class="chapter-image-caption">가을소풍</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/견학체험-봄소풍-아기동물농장 1.jpg" alt="아기동물농장 1">
+                    <div class="chapter-image-caption">아기동물농장</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/견학체험-도서관 견학.jpg" alt="도서관 견학">
+                    <div class="chapter-image-caption">도서관 견학</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/견학체험-도자기 물레체험.jpg" alt="도자기 물레체험">
+                    <div class="chapter-image-caption">도자기 물레체험</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/견학체험-시립 미술관.jpeg" alt="시립 미술관">
+                    <div class="chapter-image-caption">시립 미술관</div>
+                </div>
             </div>
         </div>
 
@@ -460,9 +531,18 @@
             <h3>2. 함께 뛰고 웃는 숲 가족활동</h3>
             <p>자연 속에서 함께하는 따뜻한 추억들입니다.</p>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <div class="chapter-image">
+                    <img src="images/숲가족활동2.jpg" alt="숲 가족활동 2">
+                    <div class="chapter-image-caption">숲 가족활동</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/숲가족활동3.jpg" alt="숲 가족활동 3">
+                    <div class="chapter-image-caption">숲 가족활동</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/숲가족활동4.jpg" alt="숲 가족활동 4">
+                    <div class="chapter-image-caption">숲 가족활동</div>
+                </div>
             </div>
         </div>
 
@@ -470,9 +550,30 @@
             <h3>3. 도전하며 성장하는 튼튼자람</h3>
             <p>신체활동을 통해 건강하고 강인한 마음을 키웁니다.</p>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <div class="chapter-image">
+                    <img src="images/튼튼자람-신체1.jpg" alt="신체활동 1">
+                    <div class="chapter-image-caption">신체활동</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/튼튼자람-신체2.jpg" alt="신체활동 2">
+                    <div class="chapter-image-caption">신체활동</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/튼튼자람-물놀이 1.jpg" alt="물놀이">
+                    <div class="chapter-image-caption">물놀이</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/튼튼자람-에어바운스 1.jpg" alt="에어바운스 1">
+                    <div class="chapter-image-caption">에어바운스</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/튼튼자람-인라인1(만5세).jpg" alt="인라인스케이트 1">
+                    <div class="chapter-image-caption">인라인스케이트</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/튼튼자람-스케이트 특강.jpg" alt="스케이트 특강">
+                    <div class="chapter-image-caption">스케이트 특강</div>
+                </div>
             </div>
         </div>
 
@@ -480,9 +581,22 @@
             <h3>4. 자연과 함께하는 공동체놀이</h3>
             <p>함께 놀고 함께 성장하는 공동체의 가치를 배웁니다.</p>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <div class="chapter-image">
+                    <img src="images/자연공동체-숲활동1.jpeg" alt="숲활동 1">
+                    <div class="chapter-image-caption">숲활동</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/자연공동체-숲활동2.jpg" alt="숲활동 2">
+                    <div class="chapter-image-caption">숲활동</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/자연공동체-토리탐험대.jpg" alt="토리탐험대">
+                    <div class="chapter-image-caption">토리탐험대</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/특성화-공동체인성놀이.jpg" alt="공동체인성놀이">
+                    <div class="chapter-image-caption">공동체인성놀이</div>
+                </div>
             </div>
         </div>
 
@@ -490,9 +604,22 @@
             <h3>5. 심고 가꾸며 배우는 생명의 소중함</h3>
             <p>자연의 순환 속에서 생명의 소중함을 깨닫습니다.</p>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <div class="chapter-image">
+                    <img src="images/자연공동체-텃밭감자심기.jpg" alt="텃밭감자심기">
+                    <div class="chapter-image-caption">텃밭감자심기</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/자연공동체-텃밭무1.jpg" alt="텃밭무 1">
+                    <div class="chapter-image-caption">텃밭무</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/자연공동체-텃밭무2.jpg" alt="텃밭무 2">
+                    <div class="chapter-image-caption">텃밭무</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/자연공동체-텃밭옥수수.jpeg" alt="텃밭옥수수">
+                    <div class="chapter-image-caption">텃밭옥수수</div>
+                </div>
             </div>
         </div>
 
@@ -500,9 +627,22 @@
             <h3>6. 상상이 펼쳐지는 모래놀이</h3>
             <p>모래 속에서 무한한 상상력이 펼쳐집니다.</p>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <div class="chapter-image">
+                    <img src="images/모래놀이1.jpg" alt="모래놀이 1">
+                    <div class="chapter-image-caption">모래놀이</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/모래놀이2.jpg" alt="모래놀이 2">
+                    <div class="chapter-image-caption">모래놀이</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/모래놀이3.jpg" alt="모래놀이 3">
+                    <div class="chapter-image-caption">모래놀이</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/모래놀이4.jpg" alt="모래놀이 4">
+                    <div class="chapter-image-caption">모래놀이</div>
+                </div>
             </div>
         </div>
 
@@ -510,9 +650,14 @@
             <h3>7. 직접 만들고 맛보는 다온누리</h3>
             <p>요리를 통해 음식의 소중함과 협력을 배웁니다.</p>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <div class="chapter-image">
+                    <img src="images/다온누리.jpg" alt="다온누리">
+                    <div class="chapter-image-caption">다온누리</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/견학체험-두부만들기 체험 진짜.jpg" alt="두부만들기">
+                    <div class="chapter-image-caption">두부만들기</div>
+                </div>
             </div>
         </div>
 
@@ -520,9 +665,22 @@
             <h3>8. 지구를 생각하는 환경교육</h3>
             <p>작은 실천이 모여 지구를 변화시킨다는 것을 배웁니다.</p>
             <div class="chapter-images">
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 1</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 2</div></div>
-                <div class="chapter-image"><div class="chapter-image-placeholder">사진 3</div></div>
+                <div class="chapter-image">
+                    <img src="images/환경교육-물의 날.jpg" alt="물의 날">
+                    <div class="chapter-image-caption">물의 날</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/환경교육-지구의 날.jpg" alt="지구의 날">
+                    <div class="chapter-image-caption">지구의 날</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/환경교육-바다의 날 경포 플로깅.jpg" alt="바다의 날 플로깅">
+                    <div class="chapter-image-caption">바다의 날 플로깅</div>
+                </div>
+                <div class="chapter-image">
+                    <img src="images/환경교육-세계 환경의 날 시장놀이.jpeg" alt="환경의 날 시장놀이">
+                    <div class="chapter-image-caption">환경의 날 시장놀이</div>
+                </div>
             </div>
         </div>
     </section>
